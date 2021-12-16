@@ -1,0 +1,50 @@
+@font-face {
+    font-family: "Imperial Normal 500";
+    src: url("fonts/imperial-normal-500.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Minimal Mono Bold";
+    src: url("fonts/minimal-mono-bold.woff2") format("woff2");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: "Minimal Mono Bold";
+    font-size: 140px;
+    padding: 0px;
+    margin: 0px;
+    line-height: 1.1em;
+}
+
+p {
+    font-family: "Imperial Normal 500";
+}
+
+.small_tiles {
+    max-width: 110px;
+}
+
+.tiles_colors {
+    max-width: 280px;
+}
+
+.santaana_objects {
+    max-width: 100px;
+}
+
+.artists_tiles {
+    max-width: 100px
+}
+
+#cover {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    max-width: 100%;
+}
+
+
