@@ -4,6 +4,21 @@
 }
 
 @font-face {
+    font-family: "Imperial Italic 700";
+    src: url("fonts/imperial-italic-700.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Imperial Normal 600";
+    src: url("fonts/imperial-normal-600.ttf") format("woff2");
+}
+
+@font-face {
+    font-family: "Imperial Normal 700";
+    src: url("fonts/imperial-normal-700.ttf") format ("woff2");
+}
+
+@font-face {
     font-family: "Minimal Mono Bold";
     src: url("fonts/minimal-mono-bold.woff2") format("woff2");
 }
@@ -12,32 +27,82 @@
     box-sizing: border-box;
 }
 
+body {
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+article{
+    max-width: 85%;
+    margin: 0px auto;
+}
+
+
 h1 {
     font-family: "Minimal Mono Bold";
-    font-size: 140px;
-    padding: 0px;
-    margin: 0px;
-    line-height: 1.1em;
+    padding: 50px 0px 0px 0px;
+    margin: -270px 0px 70px 0px;
+    line-height: 2.1em;
+    z-index: 2;
+    display: inline-block;
+    overflow: hidden;
+    font-size: 11.9vw;
+}
+
+
+h2 {
+    font-family: "Minimal Mono Bold";
+    font-size: 3em;
+    text-align: justify;
 }
 
 p {
     font-family: "Imperial Normal 500";
+    font-size: 1.4em;
+    text-align: justify;
+    letter-spacing: 0.01em;
+    line-height: 1.2em;
 }
 
-.small_tiles {
-    max-width: 110px;
+u {
+    border-bottom: black dotted 2px;
+    text-decoration: none;
 }
 
-.tiles_colors {
-    max-width: 280px;
+    
+.author div {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 250px;
+    z-index: 3;
 }
 
-.santaana_objects {
-    max-width: 100px;
+.author p {
+    font-size: 1.2em;
+    text-align: center;
+    padding:4px 12px;
+    margin: 0px;
+    border: black solid 1.2px;
+    position: relative;
+    left: 250px;
 }
 
-.artists_tiles {
-    max-width: 100px
+
+.p_left {
+    max-width: 50%;
+    margin-bottom: 0px;
+}
+
+.p_right {
+    max-width: 50%;
+    margin-left: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.flex {
+    display: flex;
 }
 
 #cover {
@@ -45,6 +110,72 @@ p {
     margin: 0px;
     padding: 0px;
     max-width: 100%;
+    z-index: 1;
+}
+
+#author {
+    width: 400px;
+    position: relative;
+    top: -125px;
+    left: 200px;
+    padding: 0px;
+    margin: 0px;
+    z-index: 3;
+}
+
+#author_2 {
+    position: relative;
+    left: 85px;
+    padding: 0px;
+    margin-right: 0px;
+}
+
+#subtitle {
+    max-width: 85%;
+    font-size: 2.1em;
+    margin-top: -70px;
+    margin-left: 4px;
+    text-align: justify;
+    text-align-last: left;
+    letter-spacing: 0.5px;
+}
+
+#h2_100 {
+    letter-spacing: 9px;
+}
+
+#santanna_2 {
+    display: flex;
+}
+
+.santanna_objects {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.santanna_objects img{
+    margin: 25px;
+    margin-bottom: 10px;
+}
+
+.santanna_numbers {
+    margin-left: -37px;
+}
+
+.santanna_numbers p{
+    display: inline-block;
+    font-size: 13px;
+    font-family: "Minimal Mono Regular";
+    padding: 2px 4px;
+    margin: 55px;
+    margin-top: -10px;
+    border: solid black 1px;
 }
 
 
