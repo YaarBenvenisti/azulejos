@@ -8,19 +8,15 @@
     src: url("fonts/imperial-italic-700.woff2") format("woff2");
 }
 
-@font-face {
-    font-family: "Imperial italic 600";
-    src: url("fonts/imperial-italic-600.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Imperial italic 700";
-    src: url("fonts/imperial-italic-700.woff2") format ("woff2");
-}
 
 @font-face {
     font-family: "Minimal Mono Bold";
     src: url("fonts/minimal-mono-bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Neuve-SBI";
+    src: url("fonts/nm-sbi.woff2") format("woff2");
 }
 
 @keyframes letter-spacing {
@@ -61,6 +57,11 @@ nav p {
     margin-left: 2%;
 }
 
+
+.issue {
+    position: absolute;
+    left: 0%;
+}
 
 h1 {
     font-family: "Minimal Mono Bold";
@@ -122,7 +123,8 @@ u {
 
 
 .author p {
-    font-size: 1.3em;
+    font-family: "Neuve-SBI";
+    font-size: 1em;
     text-align: center;
     line-height: 0.8em;
     padding: 4px 12px;
@@ -211,6 +213,7 @@ div span {
     position: relative;
     line-height: 1.2em ;
     font-size: 1.2em;
+    
 }
 
 
@@ -264,9 +267,11 @@ div span {
 
 #nyt {
     display: inline-block;
+    width: 30%;
     position: relative;
     margin-top: 1%;
-    left: 20%;
+    left: 35%;
+    z-index: -1;
 }
 
 #azulejo_4 {
@@ -300,6 +305,7 @@ div span {
     position: absolute;
     line-height: 1.2em ;
     font-size: 1.2em;
+    text-decoration: underline blue;
 }
 
 
