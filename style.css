@@ -9,13 +9,13 @@
 }
 
 @font-face {
-    font-family: "Imperial Normal 600";
-    src: url("fonts/imperial-normal-600.ttf") format("woff2");
+    font-family: "Imperial italic 600";
+    src: url("fonts/imperial-italic-600.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: "Imperial Normal 700";
-    src: url("fonts/imperial-normal-700.ttf") format ("woff2");
+    font-family: "Imperial italic 700";
+    src: url("fonts/imperial-italic-700.woff2") format ("woff2");
 }
 
 @font-face {
@@ -23,12 +23,22 @@
     src: url("fonts/minimal-mono-bold.woff2") format("woff2");
 }
 
-@-webkit-keyframes test {
+@keyframes letter-spacing {
     60% {letter-spacing: 0.015em;}
 }
 
+@keyframes letter-spacing-2 {
+    60% {letter-spacing: 0.04em;}
+}
+
+@keyframes slide {
+    100% { left: 0; }
+}
+
+
 * {
     box-sizing: border-box;
+    cursor: crosshair;
 }
 
 body {
@@ -41,19 +51,32 @@ article{
     margin: 0px auto;
 }
 
+nav {
+    display: flex;
+}
+
+nav p {
+    font-family: "Minimal Mono";
+    font-size: 1em;
+    margin-left: 2%;
+}
+
 
 h1 {
     font-family: "Minimal Mono Bold";
-    padding: 50px 0px 0px 0px;
-    margin: -285px 0px 70px 0px;
-    line-height: 2.1em;
+    line-height: 1.95em;
     z-index: 2;
     display: inline-block;
     overflow: hidden;
-    font-size: 12.8vw;
-    -webkit-animation: test 4s infinite;
-    animation: test 4s infinite;
-    letter-spacing: 0.02em;
+    font-size: 11vw;
+    position: relative;
+    left: -9%;
+    padding: 2%;
+    margin: 0%;
+    line-height: 0.7em;
+    text-align: center;
+    animation: letter-spacing-2 4s infinite;
+    letter-spacing: 0.1em;
 }
 
 
@@ -61,8 +84,8 @@ h2 {
     font-family: "Minimal Mono Bold";
     font-size: 3.5em;
     text-align: justify;
-    -webkit-animation: test 4s infinite;
-    animation: test 4s infinite;
+    -webkit-animation: letter-spacing 4s infinite;
+    animation: letter-spacing 4s infinite;
 }
 
 
@@ -81,33 +104,42 @@ u {
     text-decoration: none;
 }
 
-    
-.author div {
-    display: flex;
-    justify-content: center;
+.title {
     position: relative;
-    bottom: 250px;
-    z-index: 3;
 }
 
+.title img {
+    position: absolute;
+    top: 25%;
+    right: -7%;
+}
+    
+.author {
+    position: absolute;
+    left: 43%;
+    bottom: -20%;
+}
+
+
 .author p {
-    font-size: 1.2em;
+    font-size: 1.3em;
     text-align: center;
-    padding:4px 12px;
-    margin: 0px;
-    border: black solid 1.2px;
-    position: relative;
-    right: -31%;
+    line-height: 0.8em;
+    padding: 4px 12px;
+    margin: 2px;
 }
 
 
 .flex {
     display: flex;
+    position: relative;
     
 }
 
 .flex_img {
     display: flex;
+    margin-top: 20%;
+    position: relative;
 }
 
 .flex_img img {
@@ -165,46 +197,76 @@ div span {
     display: inline-block;
     font-size: 13px;
     font-family: "Imperial Normal 500";
-    padding: 1px 6px;
+    padding: 1.5px 6px;
     margin: 55px;
     margin-top: -10px;
     border: solid black 1.5px;
     border-radius: 10px;
 }
 
+
+.santanna_notes p {
+    font-family: "Imperial Normal 500";
+    /* display: none; */
+    position: relative;
+    line-height: 1.2em ;
+    font-size: 1.2em;
+}
+
+
+
 #cover {
     display: inline-block;
-    margin: 0px;
-    padding: 0px;
-    max-width: 100%;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    padding: 10px;
+    max-width: 50%;
     z-index: 1;
 }
 
 #author {
     width: 400px;
-    position: relative;
-    top: -125px;
-    left: 200px;
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
     padding: 0px;
     margin: 0px;
-    z-index: 3;
 }
 
-#author_2 {
+.subtitle {
     position: relative;
-    left: 85px;
-    padding: 0px;
-    margin-right: 0px;
-}
-
-#subtitle {
     max-width: 100%;
-    font-size: 2.1em;
-    margin-top: -70px;
-    margin-left: 4px;
+    margin-top: 25%;
+    font-size: 1.5em;
+    margin-left: 3px;
     text-align: left;
     text-align-last: left;
-    letter-spacing: 0.3px;
+}
+
+.subtitle p {
+    line-height: 1.2em;
+}
+
+.subtitle_1 {
+    position: relative;
+    left: 10%;
+    width: 70%;
+    margin-bottom: 20%;
+}
+
+.subtitle_2 {
+    position: relative;
+    width: 70%;
+    left: 30%;
+    margin-bottom: 20%;
+}
+
+#nyt {
+    display: inline-block;
+    position: relative;
+    margin-top: 1%;
+    left: 20%;
 }
 
 #azulejo_4 {
@@ -215,201 +277,149 @@ div span {
 #h2_100 {
     font-size: 5em;
     letter-spacing: 0.1em;
-    -webkit-animation: test 4s infinite;
-    animation: test 4s infinite;    
+    -webkit-animation: letter-spacing 4s infinite;
+    animation: letter-spacing 4s infinite;    
 }
 
+.h2_tiles {
+    position: relative;
+}
+
+.all_subtitles {
+    position: relative;
+}
+
+.hollow {
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+
+.notes {
+    font-family: "Imperial Normal 500";
+    display: none;
+    position: absolute;
+    line-height: 1.2em ;
+    font-size: 1.2em;
+}
+
+
+.clicks {
+    color: white;
+    background-color: black;
+    cursor: cell;
+}
+
+
+#subtitle_1 {
+    position: relative;
+    max-width: 55%;
+    left: -5%;
+    margin-top: -3%;
+    margin-bottom: 30%;
+}
 
 #tile_1 {
     position: absolute;
-    right: 34%;
-    top: 409%;
+    right: 20%;
+    top: 15%;
     z-index: -10;
 }
 
+
 #tile_2 {
     position: absolute;
-    right: 48%;
-    top: 450%;
+    left: 13%;
+    top: 38%;
     z-index: -10;
 }
 
 #tile_3 {
     position: absolute;
-    right: 80%;
-    top: 395%;
+    right: 15%;
+    bottom: 20%;
     z-index: -10;
 }
 
+#earthquake {
+    bottom: 10%;
+    right: 55%;
+    max-width: 40%;
+    
+}
+
+#belem {
+    bottom: 10%;
+    left: 55%;
+    max-width: 40%;
+    
+}
+
+
 #santanna_p_2 {
     display: flex;
+    position: relative;
 }
 
 #santanna_1 {
     position: absolute;
-    top: 550%;
-    right: 35%;
+    top: -15%;
+    right: 32%;
     z-index: -5;
 }
 
 #santanna_2 {
     position: absolute;
-    top: 570%;
-    right: 15%;
+    top: 15%;
+    right: 2%;
 }
 
 #santanna_3 {
     position: absolute;
-    top: 590%;
-    right: 30%;
+    bottom: -2%;
+    right: 20%;
     z-index: -5;
 }
 
-#santanna_numbers_1 {
-    position: absolute;
-    top: 583%;
-    right: 35%;
-}
 
-#santanna_numbers_2 {
-    position: absolute;
-    top: 605%;
-    right: 14%;
-}
-
-#santanna_numbers_3 {
-    position: absolute;
-    top: 620%;
-    right: 32.5%;
-    z-index: -5;
+.flex_3 {
+    position: relative;
 }
 
 #azulejos_3 {
     position: absolute;
     align-self: center;
-    left: -3%;
-    top: 288.5vw;
-    z-index: -5;
+    left: -20%;
+    top: 10%;
     
 }
 
 #azulejos_3:hover {
-    opacity: 0.5;
+    animation: slide 2s forwards;
+    animation-delay: 0.5s;
+    cursor: cell;
 }
 
-#tooltip-anchor_1 {
-    position: relative;
-    border-bottom: 1.5px dotted black;
-  }
-  
-#tooltip_1 {
-    position: absolute;
-    top: -110px; left: -500px;
-    font-size: 0.7em;
-    line-height: 1.2em;
-    max-width: 430px;
-    padding: 5px;
+.img_notes {
     display: none;
-    text-align: justify;
-    letter-spacing: 0.01px;
-
-  }
-  
-#tooltip-anchor_1:hover #tooltip_1 {
-    display: block;
-  }
-
-
-#tooltip-anchor_2 {
-    position: relative;
-    border-bottom: 1.5px dotted black;
-  }
-  
-#tooltip_2 {
     position: absolute;
-    top: -20px; right: -500px;
-    font-size: 0.7em;
-    line-height: 1.2em;
-    max-width: 430px;
-    padding: 5px;
-    display: none;
-    text-align: justify;
-    letter-spacing: 0.01px;
+}
 
-  }
-  
-#tooltip-anchor_2:hover #tooltip_2 {
-    display: block;
-  }
+#jorge_barrada {
+    top: -40%;
+    left: 15%;
+}
 
+#manuel_alves_cargaleiro {
+    top: 5%;
+    left: 25%;
+}
 
-
-  #tooltip-anchor_3 {
-    position: relative;
-    border-bottom: 1.5px dotted black;
-  }
-  
-#tooltip_3 {
-    position: absolute;
-    top: -20px; left: -850px;
-    font-size: 0.7em;
-    line-height: 1.2em;
-    max-width: 430px;
-    padding: 5px;
-    display: none;
-    text-align: justify;
-    letter-spacing: 0.01px;
-
-  }
-  
-#tooltip-anchor_3:hover #tooltip_3 {
-    display: block;
-  }
-
-  #tooltip-anchor_4 {
-    position: relative;
-    border-bottom: 1.5px dotted black;
-  }
-  
-#tooltip_4 {
-    position: absolute;
-    top: -50px; left: -460px;
-    font-size: 0.7em;
-    line-height: 1.2em;
-    max-width: 430px;
-    padding: 5px;
-    display: none;
-    text-align: justify;
-    letter-spacing: 0.01px;
-
-  }
-  
-#tooltip-anchor_4:hover #tooltip_4 {
-    display: block;
-  }
+#sa_nogueira {
+    top: 20%;
+    left: 10%;
+}
 
 
-  #tooltip-anchor_5 {
-    position: relative;
-    border-bottom: 1.5px dotted black;
-  }
-  
-#tooltip_5 {
-    position: absolute;
-    top: -50px; left: -660px;
-    font-size: 0.7em;
-    line-height: 1.2em;
-    max-width: 430px;
-    padding: 5px;
-    display: none;
-    text-align: justify;
-    letter-spacing: 0.01px;
-
-  }
-  
-#tooltip-anchor_5:hover #tooltip_5 {
-    display: block;
-  }
 
  
 
